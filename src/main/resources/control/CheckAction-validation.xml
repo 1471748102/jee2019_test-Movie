@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+    <field name="username">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>不能为空,输入正确的账号</message>
+        </field-validator>
+    </field>
+
+    <field name="password">
+        <field-validator type="stringlength">
+            <param name="minLength">6</param>
+            <message>长度至少6</message>
+        </field-validator>
+    </field>
+
+    <field name="reapeat">
+    <field-validator type="fieldexpression">
+        <param name="expression">reapeat.equals(password)</param>
+        <message>两次输入密码不一致</message>
+    </field-validator>
+    </field>
+
+
+</validators>

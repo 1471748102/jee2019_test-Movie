@@ -2,9 +2,16 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
 <head>
-    <title>实验</title>
+    <title>注册</title>
 </head>
 <body>
 <s:debug/>
+<s:form action="CheckAction" >
+    <s:textfield name="username" label="账号"/>
+    <s:textfield name="password" label="密码"/>
+    <s:textfield name="reapeat" label="重复密码"/>
+    <s:submit/>
+</s:form>
+<a href="Login.jsp"/>已有账号，前去登录</a><br>
 </body>
 </html>

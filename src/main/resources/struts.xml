@@ -6,4 +6,10 @@
 
 <struts>
 <constant name="struts.devMode" value="true"></constant>
+    <package name="hzw" extends="struts-default">
+        <action name="CheckAction" class="control.CheckAction">
+            <result>/SetupSuc.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+    </package>
 </struts>
