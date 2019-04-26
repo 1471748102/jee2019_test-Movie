@@ -5,6 +5,7 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+<constant name="struts.custom.i18n.resources" value="msg"/>
 <constant name="struts.devMode" value="true"></constant>
     <package name="hzw" extends="struts-default">
         <action name="CheckAction" class="control.CheckAction">
