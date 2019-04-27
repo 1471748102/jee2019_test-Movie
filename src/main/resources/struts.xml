@@ -35,6 +35,11 @@
             <result name="error">/ShowAllErr.jsp</result>
         </action>
 
+        <action name="Login" class="control.LoginAction">
+            <result name="success">/HelloLogin.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
 
 
     </package>

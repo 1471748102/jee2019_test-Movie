@@ -99,4 +99,20 @@ public class StuDAOImp implements StuDAO {
 
     }
 
+    public boolean inter(String username, String password) throws Exception {
+
+        boolean flag = false;
+
+        String sqlinter = "select * from USERTABLE where USERZHANGHAO=? and PASSMIMA =?";
+        try (
+             PreparedStatement pstmt = con.prepareStatement(sqlinter)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                flag = rs.next();
+            }
+        }
+        return flag;
+    }
+
 }

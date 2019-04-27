@@ -9,4 +9,5 @@ public interface StuDAO {
     List show( ) throws Exception;
     List selectbyname(String moviename) throws Exception;
     movie mlz(movie uk) throws Exception;
+    boolean inter(String username,String password) throws Exception;
 }
