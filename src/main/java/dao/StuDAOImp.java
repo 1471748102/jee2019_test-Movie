@@ -59,5 +59,24 @@ public class StuDAOImp implements StuDAO {
 
     }
 
+    public List selectbyname(String moviename) throws Exception {
+
+        List st = new ArrayList();
+        String sqlselect = "select * from MOVIEINFO where MOVIENAME='" + moviename + "'";
+        PreparedStatement pref = con.prepareStatement(sqlselect);
+        ResultSet rst = pref.executeQuery();
+
+        while (rst.next())
+        {
+            movie use= new movie();
+            use.setMoviename(rst.getString("moviename"));
+            use.setShowtime(rst.getString("showtime"));
+            use.setShortinfo(rst.getString("shortinfo"));
+            use.setPicturepath(rst.getString("picturepath"));
+            st.add(use);
+        }
+        return st;
+
+    }
 
 }

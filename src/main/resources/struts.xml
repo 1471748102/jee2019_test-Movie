@@ -18,5 +18,10 @@
             <result name="error">/ShowAllErr.jsp</result>
         </action>
 
+        <action name="select" class="control.SelectByName">
+            <result name="success">/SelectNameSuc.jsp</result>
+            <result name="error">/ShowAllErr.jsp</result>
+        </action>
+
     </package>
 </struts>
