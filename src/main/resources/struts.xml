@@ -12,5 +12,11 @@
             <result>/SetupSuc.jsp</result>
             <result name="input">/index.jsp</result>
         </action>
+
+        <action name="CheckAction" class="control">
+            <result>/SetupSuc.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+
     </package>
 </struts>
