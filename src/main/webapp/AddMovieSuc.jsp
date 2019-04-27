@@ -17,5 +17,6 @@
 上映时间：<s:property value="uk.showtime"/><br>
 简介：<s:property value="uk.shortinfo"/><br>
 图片地址：<s:property value="uk.picturepath"/><br>
+<%  response.setHeader("refresh","3;URL=ShowAllMovie.jsp");%>
 </body>
 </html>

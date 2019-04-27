@@ -8,6 +8,13 @@
 <constant name="struts.custom.i18n.resources" value="msg"/>
 <constant name="struts.devMode" value="true"></constant>
     <package name="hzw" extends="struts-default">
+        <global-results>
+            <result name="io_Exception">/Exception_io.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.io.IOException" result="io_Exception"/>
+        </global-exception-mappings>
+
         <action name="CheckAction" class="control.CheckAction">
             <result>/SetupSuc.jsp</result>
             <result name="input">/index.jsp</result>
@@ -27,6 +34,8 @@
             <result name="success">/AddMovieSuc.jsp</result>
             <result name="error">/ShowAllErr.jsp</result>
         </action>
+
+
 
     </package>
 </struts>
