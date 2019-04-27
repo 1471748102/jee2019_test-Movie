@@ -13,6 +13,6 @@
     <s:submit/>
 </s:form>
 <a href="Login.jsp"/>先去登陆</a><br>
-<a href="upload.jsp"/>上传文件</a><br>
+
 </body>
 </html>

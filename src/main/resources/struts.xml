@@ -41,6 +41,14 @@
         </action>
 
 
+        <action name="upload" class="control.FileUpload">
+            <result>/upload_suc.jsp</result>
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg</param>
+                <param name="maximumSize">1024000</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
 
     </package>
 </struts>

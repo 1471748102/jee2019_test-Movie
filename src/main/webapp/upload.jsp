@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Hzw
   Date: 2019/4/27
-  Time: 10:35
+  Time: 9:59
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,9 +12,9 @@
     <title>Title</title>
 </head>
 <body>
-登录成功！
-账号：<s:property value="username"/><br>
-<a href="ShowAllMovie.jsp"/>查看所有电影信息</a><br>
-<a href="upload.jsp"/>上传图片</a><br>
+<s:form name="upload" action="upload" method="post" enctype="multipart/form-data">
+    <s:file name="upload" label="选择要上传的文件"/>
+    <s:submit/>
+</s:form>
 </body>
 </html>
