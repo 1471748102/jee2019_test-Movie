@@ -13,7 +13,10 @@
             <result name="input">/index.jsp</result>
         </action>
 
-
+        <action name="show" class="control.ShowAllMovie">
+            <result name="success">/ShowAllSuc.jsp</result>
+            <result name="error">/ShowAllErr.jsp</result>
+        </action>
 
     </package>
 </struts>
