@@ -79,4 +79,24 @@ public class StuDAOImp implements StuDAO {
 
     }
 
+    public movie mlz(movie uk) throws Exception {
+
+        String sqlmlz = "insert into MOVIEINFO VALUES(?,?,?,?)";
+        try {
+            PreparedStatement pret = con.prepareStatement(sqlmlz);
+
+            pret.setString(1, uk.getMoviename());
+            pret.setString(2, uk.getShowtime());
+            pret.setString(3, uk.getShortinfo());
+            pret.setString(4, uk.getPicturepath());
+            pret.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Exception");
+        }
+        return uk;
+
+    }
+
 }

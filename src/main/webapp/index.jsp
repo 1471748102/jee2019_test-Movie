@@ -12,6 +12,6 @@
     <s:textfield name="reapeat" label="重复密码"/>
     <s:submit/>
 </s:form>
-
+<a href="ShowAllMovie.jsp"/>已有账号，前去登录</a><br>
 </body>
 </html>
